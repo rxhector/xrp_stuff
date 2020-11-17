@@ -38,9 +38,7 @@ api.connect().then(() => {
   
   return api.sign(prepared.txJSON , mySecret).signedTransaction;
 
-  console.log('getAccountInfo done');
 
-  /* end custom code -------------------------------------- */
 }).then(signed => {
   console.log("Signed : " , signed);
 
@@ -49,6 +47,9 @@ api.connect().then(() => {
 }).then(final => {
 
   console.log(final , 'done and disconnected.');
+  
+    /* end custom code -------------------------------------- */
+  
   return api.disconnect();
 }).catch(console.error);
 
